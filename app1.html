@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Accordion Slider</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+.accordion.app1 {
+    -webkit-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    -moz-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #505050;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 50px;
+    margin: 0 auto;
+    height: 490px;
+    width: 400px;
+	margin-top:140px;
+}
+
+.accordion.app1 > ul > li,
+.app1 .accordion-title,
+.app1 .accordion-content,
+.app1 .accordion-separator {
+    float: none;
+}
+
+.accordion.app1 > ul > li {
+    background-color: #45bfd6;
+    margin-right: -0px;
+    margin-bottom: -190px;
+}
+
+.app1 .accordion-select:checked ~ .accordion-separator {
+    margin-right: 0px;
+    margin-bottom: 190px;
+}
+
+.app1 .accordion-title,
+.app1 .accordion-select  {
+    background-color: #ee8e69;
+    color: #2b0a0a;
+    width: 400px;
+    height: 50px;
+    font-size: 27px;
+}
+
+.app1 .accordion-title span {
+    margin-bottom: 25px; 
+    margin-left: 25px;
+}
+
+.app1 .accordion-select:hover ~ .accordion-title,
+.app1 .accordion-select:checked ~ .accordion-title {
+    background-color: #eee8a6;
+}
+
+.app1 .accordion-title span  {	
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-writing-mode: lr-tb;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    margin-bottom: 0px;
+    line-height: 50px;
+}
+
+.app1 .accordion-content {
+    background-color: #d66b24;
+    color: #5f3b77;
+    height: 150px;
+    width: 360px;
+    padding: 20px;
+}
+
+.app1 .accordion-title,
+.app1 .accordion-select:checked ~ .accordion-content {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+/* Do not change following properties, they aren't 
+generated automatically and are common for each slider. */
+.accordion {
+    overflow: hidden;
+}
+
+.accordion > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 101%;
+}
+
+.accordion > ul > li,
+.accordion-title {
+    position: relative;
+}
+
+.accordion-select {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.accordion-title span {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.accordion-content {
+    position: relative;
+    overflow: auto;
+}
+
+.accordion-separator {
+    transition: margin 0.3s ease 0.1s;
+    -o-transition: margin 0.3s ease 0.1s;
+    -moz-transition: margin 0.3s ease 0.1s;
+    -webkit-transition: margin 0.3s ease 0.1s;
+}
+</style>
+</head>
+<body>
+<div class="accordion app1">
+    <ul>
+        <li>
+            <input type="radio" name="select" class="accordion-select" checked />
+            <div class="accordion-title">
+                <span>Title</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Title</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Title</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Title</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Title</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>So you are</span>
+            </div>
+            <div class="accordion-content">
+                Content
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+    </ul>
+</div>
+<div style="text-align:center;margin-top:50px;">
+    <a href="http://accordionslider.com/" style="color:#568EEA;text-decoration:none;">
+       Amzing Fun App
+    </a>
+</div>
+</body>
+</html>
